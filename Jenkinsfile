@@ -5,7 +5,7 @@ pipeline {
 
         stage("setting") {
             input {
-                message 'what is your name???'
+                message 'what is your name?????'
                 ok 'ok!!!'
                 parameters {
                     string(name: 'NAME', defaultValue: 'jongchan', description: 'pipeline syntax example')
