@@ -4,7 +4,7 @@ pipeline {
 parameters {            // Pipeline이 동작할 때 넘겨 받는 인자 값들
   booleanParam(name : 'BUILD_DOCKER_IMAGE', defaultValue : true, description : 'BUILD_DOCKER_IMAGE')
   booleanParam(name : 'RUN_TEST', defaultValue : true, description : 'RUN_TEST')
-  booleanParam(naeme : 'PUSH_DOCKER_IMAGE', defaultValue : true, description : 'PUSH_DOCKER_IMAGE')
+  booleanParam(name : 'PUSH_DOCKER_IMAGE', defaultValue : true, description : 'PUSH_DOCKER_IMAGE')
 
 
 }
