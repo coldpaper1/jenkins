@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  jekins:
+    image: jenkins/jenkins:latest
+    container_name: jenkins
+    environment:
+    - "TZ=Asia/Seoul"
+    ports:
+    - "3333:8080"
+    volumes:
+    - "./data:/var/jenkins_home"
+   
