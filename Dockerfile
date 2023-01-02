@@ -1,3 +1,3 @@
-FROM nginx
+FROM nginxi:1.14
 RUN apt update
 RUN apt install net-tools wget
