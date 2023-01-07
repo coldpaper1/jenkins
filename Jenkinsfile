@@ -22,7 +22,7 @@ pipeline {
 
             input {
                 message 'Please name the tag'
-                ok 'ok!!!'
+                ok 'ok'
                 parameters {
                     string(name: 'TAG', defaultValue: 'v1', description: 'docker image tag')
 
