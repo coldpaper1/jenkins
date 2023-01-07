@@ -9,9 +9,9 @@ pipeline {
             steps {
 
                 git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'
-
+		def scannerHome = tool 'SonarQube Scanner';
                 withSonarQubeEnv('SonarQube') { 
-                	sh "tool 'SonarScanner'/bin/sonar-scanner"
+                	sh "${scannerHome}/bin/sonar-scanner"
 
                 }
 
