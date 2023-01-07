@@ -5,13 +5,13 @@ pipeline {
 
 
         stage("SonarQube") {
-
+		
             steps {
 
                 git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'
 
                 withSonarQubeEnv('SonarQube') { 
-                	sh "${scannerHome}/bin/sonar-scanner"
+                	sh "tool 'SonarScanner'/bin/sonar-scanner"
 
                 }
 
