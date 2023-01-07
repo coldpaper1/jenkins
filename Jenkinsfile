@@ -10,10 +10,10 @@ pipeline {
 
                 git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'
 
-                //withSonarQubeEnv('SonarQube') { 
-                //    app.py
+                withSonarQubeEnv('SonarQube') { 
+                	sh "${scannerHome}/bin/sonar-scanner"
 
-            //}
+                }
 
 
             }
