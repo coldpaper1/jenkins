@@ -19,7 +19,7 @@ pipeline {
 
 		//def scannerHome = tool 'SonarQube';
                 withSonarQubeEnv(credentialsId:'sonaerqube', installationName:'SonarQube') { 
-                sh "/bin/sonar-scanner"
+                sh "{$scannerHome}/bin/sonar-scanner -version"
 
                 }
 
