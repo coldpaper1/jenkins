@@ -16,7 +16,7 @@ pipeline {
     		def scannerHome = tool 'sonarqube';
 		steps{
 			script {		
-				def scannerHome = tool 'sonarqube';
+				scannerHome = tool 'sonarqube';
 			}	
     			withSonarQubeEnv(sonarqube) {
       				sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=jenkins -Dsonar.sources=."
