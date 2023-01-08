@@ -15,15 +15,7 @@ pipeline {
 
         stage("SonarQube") {
 		steps{
-			script {
-				def scannerHome = tool 'sonarqube';
-				sh '''
-					echo ${scannerHome}
-				'''
-			}	
-    			withSonarQubeEnv('sonarqube') {
-				sh "${scannerHome}/bin/sonar-scanner"
-    			}
+				sh "./var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarqube/bin/sonar-scanner -Dsonar.projectKey=jenkins   -Dsonar.sources=/var/jenkins_home/workspace/test  -Dsonar.host.url=http://3.35.104.93:9000   -Dsonar.login=sqp_baa83405135069036c620f4629fcfc015b868f80"
 		
 
 		}
