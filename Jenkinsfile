@@ -4,11 +4,19 @@ pipeline {
     stages {
 
 
+	stage("scm") {
+		steos {
+			git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'
+		
+		}
+
+	}
+
+
         stage("SonarQube") {
 		
             steps {
 
-                git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'
 		def scannerHome = tool 'SonarQube';
                 withSonarQubeEnv('SonarQube') { 
                 sh "${scannerHome}/bin/sonar-scanner"
