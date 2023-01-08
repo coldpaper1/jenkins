@@ -19,13 +19,7 @@ pipeline {
 
 		def scannerHome = tool 'SonarQube';
                 withSonarQubeEnv('SonarQube') { 
-                sh "docker run \
-    --rm \
-    -e SONAR_HOST_URL="http://3.35.104.93:9000/" \
-    -e SONAR_SCANNER_OPTS="-Dsonar.projectKey=jenkinstest" \
-    -e SONAR_LOGIN="sqp_e7a37d9923448e4c25f352e2e222013968969b46" \
-    -v test:/usr/src \
-    sonarsource/sonar-scanner-cli"
+                sh "docker run --rm -e SONAR_HOST_URL="http://3.35.104.93:9000/" -e SONAR_SCANNER_OPTS="-Dsonar.projectKey=jenkinstest" -e SONAR_LOGIN="sqp_e7a37d9923448e4c25f352e2e222013968969b46" -v .:/usr/src sonarsource/sonar-scanner-cli"
 
                 }
 
