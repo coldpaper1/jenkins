@@ -15,7 +15,6 @@ COPY ./app.py /app/
 RUN python3 -V
 RUN pip3 install --upgrade pip
 
-COPY start.sh /app/
 RUN pip3 install werkzeug==2.2.2
 RUN pip3 install flask==2.2.2 
 CMD ["python3", "app.py"]
