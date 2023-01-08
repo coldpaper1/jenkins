@@ -6,7 +6,8 @@ pipeline {
 
 	stage("scm") {
 		steps {
-			git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'
+			git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'i
+			echo "${scannerHome}"
 		
 		}
 
