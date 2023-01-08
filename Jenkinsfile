@@ -17,7 +17,7 @@ pipeline {
     		//def scannerHome = tool 'sonarqube';
 		steps{
 			//script {
-				def scannerHome = tool 'sonarqube';
+				//def scannerHome = tool 'sonarqube';
 			//}	
     			withSonarQubeEnv(sonarqube) {
       				sh "/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarqube/bin/sonar-scanner"
