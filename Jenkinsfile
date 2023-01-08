@@ -5,10 +5,7 @@ pipeline {
 
 	stage("scm") {
 		steps {
-			sh '''
-				rm -rf app.py
-			'''
-			git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'
+			git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'test'
 		
 		}
 
