@@ -15,7 +15,7 @@ pipeline {
         stage("SonarQube") {
     		//`def scannerHome = tool 'sonarqube';
 		tools {
-			sonarQube 'sonarqube'
+			sonarqube 'sonarqube'
 		}
 		steps {	
 		
