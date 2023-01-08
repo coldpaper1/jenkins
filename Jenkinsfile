@@ -16,9 +16,9 @@ pipeline {
     		//`def scannerHome = tool 'sonarqube';
 		steps {
         		script {
-          			scannerHome = tool 'SonarQube Scanner 2.8'
+          			scannerHome = tool 'sonarqube'
         		}
-        		withSonarQubeEnv('SonarQube Scanner') {
+        		withSonarQubeEnv('sonarqube') {
           			sh "${scannerHome}/bin/sonar-scanner"
         		}
       		}		
