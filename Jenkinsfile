@@ -16,11 +16,11 @@ pipeline {
         stage("SonarQube") {
     		//def scannerHome = tool 'sonarqube';
 		steps{
-			script {
+			//script {
 				def scannerHome = tool 'sonarqube';
-			}	
+			//}	
     			withSonarQubeEnv(sonarqube) {
-      				sh "${scannerHome}/bin/sonar-scanner"
+      				sh "/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarqube/bin/sonar-scanner"
     			}		
 
 		}
