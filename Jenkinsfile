@@ -7,7 +7,7 @@ pipeline {
 	stage("scm") {
 		steps {
 			git url: 'https://github.com/coldpaper1/jenkins.git', branch: 'main'
-			echo "${scannerHome}"
+			sh echo "${scannerHome}"
 		
 		}
 
