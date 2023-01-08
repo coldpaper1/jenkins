@@ -47,17 +47,13 @@ pipeline {
             }
 
 
-            }           
+	}           
 
 
         
 
-        post {
-            success {
-                echo "Good!!!!!!!!!!!!!!!"
-            }
 
 
-        }
+        
     }
 }
