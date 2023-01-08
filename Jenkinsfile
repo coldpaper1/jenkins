@@ -14,18 +14,15 @@ pipeline {
 
         stage("SonarQube") {
     		//`def scannerHome = tool 'sonarqube';
-		tools {
-			'sonarqube'
-		}
-		steps {	
-		
-    			withSonarQubeEnv('sonarqube') {
-				sh 'sonar-scanner'
-    			}		
-
-		}
-
-            }
+		steps {
+        		script {
+          			scannerHome = tool 'SonarQube Scanner 2.8'
+        		}
+        		withSonarQubeEnv('SonarQube Scanner') {
+          			sh "${scannerHome}/bin/sonar-scanner"
+        		}
+      		}		
+        }
 	
 
          stage("docker build & push") {
