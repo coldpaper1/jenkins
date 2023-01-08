@@ -21,8 +21,8 @@ pipeline {
             steps {
 
 		//def scannerHome = tool 'SonarQube';
-                withSonarQubeEnv(credentialsId:'sonaerqube', installationName:'SonarQube') { 
-                sh "{$scannerHome}/bin/sonar-scanner --version"
+                withSonarQubeEnv(credentialsId:'sonaerqube2', installationName:'SonarQube') { 
+                sh "{$scannerHome}/bin/sonar-scanner"
 
                 }
 
