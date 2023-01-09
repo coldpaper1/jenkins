@@ -55,7 +55,7 @@ pipeline {
     		
 	steps {
             sshagent(credentials: ['ubuntu']) {
-            sh ''' #!/bin/bash
+            sh ''' 
                 ssh -o StrictHostKeyChecking=no ${HOST}@${SERVER} docker run -d --name test -p 5000:5000 mhkim1560/sonarqube:v21  && docker ps                  
             ''' 
             }  
