@@ -53,7 +53,7 @@ pipeline {
 	}
         stage("deploy") {
     		
-		steps {
+	steps {
             sshagent(credentials: ['ubuntu']) {
             sh '''
                 ssh -o StrictHostKeyChecking=no ${HOST}@${SERVER} "ls"                    
