@@ -11,7 +11,7 @@ ENV LC_ALL ko_KR.UTF-8
 
 RUN echo 'alias python=python3.8' >> .bashrc
 EXPOSE 5000
-COPY ./app.py /app/
+COPY app.py app.py
 RUN python3 -V
 RUN pip3 install --upgrade pip
 
