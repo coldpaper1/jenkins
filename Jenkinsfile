@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        SERVER = '52.79.141.200'
+        SERVER = '3.38.101.132'
         HOST = 'ubuntu'
     }
 
@@ -56,7 +56,7 @@ pipeline {
 	steps {
             sshagent(credentials: ['ubuntu']) {
             sh ''' #!/bin/bash
-                ssh -o StrictHostKeyChecking=no ${HOST}@${SERVER} docker run -d --name test -p 5000:5000 mhkim1560/sonarqube:v16                  
+                ssh -o StrictHostKeyChecking=no ${HOST}@${SERVER} docker run -d --name test -p 5000:5000 mhkim1560/sonarqube:v18                  
             ''' 
             }  
       	}
