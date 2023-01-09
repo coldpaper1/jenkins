@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        SERVER = '172.31.14.124'
+        SERVER = '52.79.141.200'
         HOST = 'ubuntu'
     }
 
