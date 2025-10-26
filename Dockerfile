@@ -4,4 +4,4 @@ COPY requirements.txt /app
 COPY app.py /app
 EXPOSE 5000
 RUN pip install -r requirements.txt
-CMD python main.py
+CMD python app.py
