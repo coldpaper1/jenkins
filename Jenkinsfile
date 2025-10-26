@@ -8,6 +8,9 @@ pipeline {
 		}
 	}
      stage("docker build & push") {
+        environment {
+                DockerCredentials = credentials('coldpaper-dockerhub')
+            }
         input {
             message 'Please name the tag'
             ok 'ok!'
@@ -17,6 +20,7 @@ pipeline {
         }
         steps {
             sh '''
+            docker login --username mhkim1560 --password-stdin ${DockerCredentials}
             docker build -t mhkim1560/simple-fastapi:${TAG} .
             docker push mhkim1560/simple-fastapi:${TAG}
             '''
