@@ -20,7 +20,7 @@ pipeline {
         }
         steps {
             sh '''
-            docker login --username mhkim1560 --password-stdin ${DockerCredentials}
+            docker login --username mhkim1560 --password ${DockerCredentials}
             docker build -t mhkim1560/simple-fastapi:${TAG} .
             docker push mhkim1560/simple-fastapi:${TAG}
             '''
